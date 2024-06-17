@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Outside to Hide Box</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+
+    <div id="targetElement" class="w-64 h-64 bg-blue-500 text-white flex items-center justify-center text-center rounded-lg shadow-lg">
+        Click outside this box to hide it.
+    </div>
+
+    <script>
+        document.addEventListener('click', function(event) {
+            const targetElement = document.getElementById('targetElement');
+            const isClickInside = targetElement.contains(event.target);
+
+            if (!isClickInside) {
+                // Hide the box
+                targetElement.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
