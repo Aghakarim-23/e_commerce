@@ -4,101 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <div class="md:flex md:justify-center md:relative" id="overlay">
-      <header
-        class="md:w-full py-4 px-4 xl:px-0 md:fixed h-[6rem] z-10 bg-white"
-      >
+      <header class="md:w-full py-4 px-4 xl:px-0 md:fixed h-[6rem] z-10 bg-white">
         <div class="max-w-[1200px] m-auto flex justify-between items-center">
           <nav class="hidden md:flex md:w-[33%]" id="leftSideNavlinks">
             <ul class="md:flex md:w-full md:justify-between">
-              <li>
-                <a href="#" class="text-[18px] pb-2 ">WOMEN</a>
-              </li>
-              <li>
-                <a href="#" class="text-[18px] pb-2">MEN</a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="text-[18px] pb-2 md:mr-[3rem]"
-                  >KIDS</a
-                >
-              </li>
+              <li><a href="#" class="text-[18px] pb-2 ">WOMEN</a></li>
+              <li><a href="#" class="text-[18px] pb-2">MEN</a></li>
+              <li><a href="#" class="text-[18px] pb-2 md:mr-[3rem]">KIDS</a></li>
             </ul>
           </nav>
           <a href="index.htm"><img src="img/Brand icon.png" alt="logo" /></a>
           <i class="fa-solid fa-bars text-[1.4em] md:hidden"></i>
-          <div
-            class="right-side hidden md:flex md:w-[33%] md:justify-end md:items-center"
-          >
+          <div class="right-side hidden md:flex md:w-[33%] md:justify-end md:items-center">
             <span class="text-[18px]" id="money">＄</span>
-            <i
-              class="fa-solid fa-chevron-down md:transition-transform md:duration-200 md:pt-[8px] text-[.8em]"
-            ></i>
+            <i class="fa-solid fa-chevron-down md:transition-transform md:duration-200 md:pt-[8px] text-[.8em]"></i>
             <i class="fa-solid fa-cart-shopping md:pl-[10px]"></i>
           </div>
         </div>
       </header>
-      <ul
-        class="hidden sm:absolute md:absolute md:z-40 md:top-[5rem] md:right-[10px] xl:right-[5.5rem] 2xl:right-[40rem] w-[114px] h-[169px] md:shadow-lg"
-        id="currencyMenu"
-      >
-        <li class="w-full py-4 bg-white text-center">
-          <a href="#" class="">$ USD</a>
-        </li>
-        <li class="w-full py-4 text-center ">
-          <a href="#" class="">€ EUR</a>
-        </li>
-        <li class="w-full py-4 bg-white text-center">
-          <a href="#" class="">¥ JPY</a>
-        </li>
+      <ul class="hidden sm:absolute md:absolute md:z-40 md:top-[5rem] md:right-[10px] xl:right-[5.5rem] 2xl:right-[40rem] w-[114px] h-[169px] md:shadow-lg" id="currencyMenu">
+        <li class="w-full py-4 bg-white text-center"><a href="#" class="">$ USD</a></li>
+        <li class="w-full py-4 text-center "><a href="#" class="">€ EUR</a></li>
+        <li class="w-full py-4 bg-white text-center"><a href="#" class="">¥ JPY</a></li>
       </ul>
       <div class="max-w-[1200px] m-auto">
-        <nav class="mobile-menu pt-4 m-auto md:hidden">
+        <nav class="mobile-menu pt-4 m-auto md:hidden" >
           <ul>
-            <li
-              class="flex justify-center w-full py-2 text-[1.3em] border-y-[1px]"
-            >
-              <a href="#" class="focus:text-green-600">WOMEN</a>
-            </li>
-            <li
-              class="flex justify-center w-full py-2 text-[1.3em] border-y-[1px]"
-            >
-              <a href="#" class="focus:text-green-600">MEN</a>
-            </li>
-            <li
-              class="flex justify-center w-full py-2 text-[1.3em] border-y-[1px]"
-            >
-              <a href="#" class="focus:text-green-600">KIDS</a>
-            </li>
+            <li class="flex justify-center w-full py-2 text-[1.3em] border-y-[1px]"><a href="#">WOMEN</a></li>
+            <li class="flex justify-center w-full py-2 text-[1.3em] border-y-[1px]"><a href="#">MEN</a></li>
+            <li class="flex justify-center w-full py-2 text-[1.3em] border-y-[1px]"><a href="#">KIDS</a></li>
           </ul>
         </nav>
-        <h1
-          class="text-[1.8rem] md:text-[2rem] text-center md:text-left p-6 md:pl-0 md:pt-[7rem]"
-        >
-          Category
-        </h1>
+        <h1 class="text-[1.8rem] md:text-[2rem] text-center md:text-left p-6 md:pl-0 md:pt-[7rem]">Category</h1>
         <div class="flex flex-wrap justify-center md:gap-5 pb-2 md:py-8">
-          <div
-            class="w-[386px] bg-white h-[444px] p-4 md:p-0 md:hover:p-4 md:hover:duration-[.3s] hover:md:shadow-xl"
-          >
+          <div class="w-[386px] bg-white h-[444px] p-4 md:p-0 md:hover:p-4 md:hover:duration-[.3s] hover:md:shadow-xl">
             <div class="mb-[2rem] md:relative group">
               <img src="img/sweater-1.jpg" class="w-full" alt="1" />
               <h4 class="py-2 text-[1.4rem]">Apollo Running Short</h4>
-              <h6 class="py-[5px]">$50.00</h6>
-              <i
-                class="fa-solid fa-cart-shopping opacity-0 md:group-hover:opacity-100 cursor-pointer md:absolute md:bottom-16 md:right-6 md:bg-green-400 md:text-white md:p-4 md:rounded-full"
-              ></i>
+              <h6 class="py-[5px] price">$50.00</h6>
+              <i class="fa-solid fa-cart-shopping opacity-0 md:group-hover:opacity-100 cursor-pointer md:absolute md:bottom-16 md:right-6 md:bg-green-400 md:text-white md:p-4 md:rounded-full"></i>
             </div>
           </div>
           <div
@@ -107,7 +56,7 @@
             <div class="mb-[2rem] md:relative group">
               <img src="img/sweater-2.jpg" class="w-full" alt="2" />
               <h4 class="py-2 text-[1.4rem]">Apollo Running Short</h4>
-              <h6 class="py-[5px]">$50.00</h6>
+              <h6 class="py-[5px] price">$50.00</h6>
               <i
                 class="fa-solid fa-cart-shopping opacity-0 md:group-hover:opacity-100 cursor-pointer md:absolute md:bottom-16 md:right-6 md:bg-green-400 md:text-white md:p-4 md:rounded-full"
               ></i>
@@ -119,7 +68,7 @@
             <div class="mb-[2rem] md:relative group">
               <img src="img/sweater-3.jpg" class="w-full" alt="3" />
               <h4 class="py-2 text-[1.4rem]">Apollo Running Short</h4>
-              <h6 class="py-[5px]">$50.00</h6>
+              <h6 class="py-[5px] price">$50.00</h6>
               <i
                 class="fa-solid fa-cart-shopping opacity-0 md:group-hover:opacity-100 cursor-pointer md:absolute md:bottom-16 md:right-6 md:bg-green-400 md:text-white md:p-4 md:rounded-full"
               ></i>
@@ -131,7 +80,7 @@
             <div class="mb-[2rem] md:relative group">
               <img src="img/sweater-4.jpg" class="w-full" alt="4" />
               <h4 class="py-2 text-[1.4rem]">Apollo Running Short</h4>
-              <h6 class="py-[5px]">$50.00</h6>
+              <h6 class="py-[5px] price">$50.00</h6>
               <i
                 class="fa-solid fa-cart-shopping opacity-0 md:group-hover:opacity-100 cursor-pointer md:absolute md:bottom-16 md:right-6 md:bg-green-400 md:text-white md:p-4 md:rounded-full"
               ></i>
@@ -143,7 +92,7 @@
             <div class="mb-[2rem] md:relative group">
               <img src="img/sweater-5.jpg" class="w-full" alt="5" />
               <h4 class="py-2 text-[1.4rem]">Apollo Running Short</h4>
-              <h6 class="py-[5px]">$50.00</h6>
+              <h6 class="py-[5px] price">$50.00</h6>
               <i
                 class="fa-solid fa-cart-shopping opacity-0 md:group-hover:opacity-100 cursor-pointer md:absolute md:bottom-16 md:right-6 md:bg-green-400 md:text-white md:p-4 md:rounded-full"
               ></i>
@@ -155,7 +104,7 @@
             <div class="mb-[2rem] md:relative group">
               <img src="img/sweater-6.jpg" class="w-full" alt="6" />
               <h4 class="py-2 text-[1.4rem]">Apollo Running Short</h4>
-              <h6 class="py-[5px]">$50.00</h6>
+              <h6 class="py-[5px] price">$50.00</h6>
               <i
                 class="fa-solid fa-cart-shopping opacity-0 md:group-hover:opacity-100 cursor-pointer md:absolute md:bottom-16 md:right-6 md:bg-green-400 md:text-white md:p-4 md:rounded-full"
               ></i>
@@ -167,7 +116,7 @@
             <div class="mb-[2rem] md:relative group">
               <img src="img/sweater-1.jpg" class="w-full" alt="1" />
               <h4 class="py-2 text-[1.4rem]">Apollo Running Short</h4>
-              <h6 class="py-[5px]">$50.00</h6>
+              <h6 class="py-[5px] price">$50.00</h6>
               <i
                 class="fa-solid fa-cart-shopping opacity-0 md:group-hover:opacity-100 cursor-pointer md:absolute md:bottom-16 md:right-6 md:bg-green-400 md:text-white md:p-4 md:rounded-full"
               ></i>
@@ -179,7 +128,7 @@
             <div class="mb-[2rem] md:relative group">
               <img src="img/sweater-2.jpg" class="w-full" alt="2" />
               <h4 class="py-2 text-[1.4rem]">Apollo Running Short</h4>
-              <h6 class="py-[5px]">$50.00</h6>
+              <h6 class="py-[5px] price">$50.00</h6>
               <i
                 class="fa-solid fa-cart-shopping opacity-0 md:group-hover:opacity-100 cursor-pointer md:absolute md:bottom-16 md:right-6 md:bg-green-400 md:text-white md:p-4 md:rounded-full"
               ></i>
@@ -191,7 +140,7 @@
             <div class="mb-[2rem] md:relative group">
               <img src="img/sweater-3.jpg" class="w-full" alt="3" />
               <h4 class="py-2 text-[1.4rem]">Apollo Running Short</h4>
-              <h6 class="py-[5px]">$50.00</h6>
+              <h6 class="py-[5px] price">$50.00</h6>
               <i
                 class="fa-solid fa-cart-shopping opacity-0 md:group-hover:opacity-100 cursor-pointer md:absolute md:bottom-16 md:right-6 md:bg-green-400 md:text-white md:p-4 md:rounded-full"
               ></i>

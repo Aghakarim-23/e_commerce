@@ -31,14 +31,26 @@ document.addEventListener("click", (e) =>{
 
 let navLinks = document.querySelectorAll("#currencyMenu li a")
 let money = document.getElementById("money");
+let price = document.querySelectorAll(".price")
 navLinks.forEach(link =>{
     link.addEventListener("click", () => {
-        // currencyMenu.classList.add("hidden")
+        currencyMenu.classList.add("hidden")
         faChevronDown.classList.remove("rotate-180");
-        money.innerText  = link.text.slice(0,1)
+        money.innerText  = link.text.slice(0,1) ;
+    })
+    console.log(price);
+})
+
+// for change all product currency 
+navLinks.forEach(link => {
+    link.addEventListener("click", ()=> {
+        price.forEach(priceLink =>{
+            priceLink.innerText = link.text.slice(0,1) + "50.00";
+        })
     })
 })
-// for navlink color
+
+// for currenclink bg-color
 let navLinksColor = document.querySelectorAll("#currencyMenu li")
 navLinksColor.forEach(coloredLink =>{
     coloredLink.addEventListener("click", () => {
@@ -46,7 +58,7 @@ navLinksColor.forEach(coloredLink =>{
         coloredLink.classList.add("bg-gray-200")
     })
 })
-
+// for desktop link color  
 let leftSideNavlinks = document.querySelectorAll("#leftSideNavlinks a")
 leftSideNavlinks.forEach(leftSideLink => {
     leftSideLink.addEventListener("click", () =>{
@@ -54,5 +66,14 @@ leftSideNavlinks.forEach(leftSideLink => {
             leftSideLink.classList.remove("text-green-600", "border-green-300","border-b-2")
         })
         leftSideLink.classList.add("text-green-600", "border-green-300","border-b-2")
+    })
+})
+// for mobileLink color  
+let mobileMenuLinks = document.querySelectorAll(".mobile-menu a")
+mobileMenuLinks.forEach(mobileMenuLink => {
+    mobileMenuLink.addEventListener("click",() =>{
+        mobileMenuLinks.forEach(mobileMenuLink => 
+            mobileMenuLink.classList.remove("text-green-600"))
+            mobileMenuLink.classList.add("text-green-600")   
     })
 })
