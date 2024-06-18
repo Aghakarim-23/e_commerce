@@ -10,8 +10,6 @@ faChevronDown.addEventListener("click", () => {
     faChevronDown.classList.toggle("rotate-180");
     currencyMenu.classList.toggle("hidden")
     overlay.classList.remove("bg-gray-200")
-
-
 })
 
 const faShoppingCard = document.querySelector(".fa-cart-shopping")
@@ -20,9 +18,23 @@ faShoppingCard.addEventListener("click", () =>{
     overlay.classList.toggle("bg-gray-200")
 })
 
-document.addEventListener("click", (event) => {
-    if (!faChevronDown.contains(event.target) && !currencyMenu.contains(event.target)) {
+document.addEventListener("click", (e) =>{
+    if(!currencyMenu.contains(e.target) && (!faChevronDown.contains(e.target))){
+        currencyMenu.classList.add("hidden")
         faChevronDown.classList.remove("rotate-180");
-        currencyMenu.classList.add("hidden");
     }
-}); 
+
+    if(!faShoppingCard.contains(e.target)){
+        overlay.classList.remove("bg-gray-200")
+    }
+})
+
+let navLinks = document.querySelectorAll("#currencyMenu li a")
+let money = document.getElementById("money");
+navLinks.forEach(link =>{
+    link.addEventListener("click", () => {
+        currencyMenu.classList.add("hidden")
+        faChevronDown.classList.remove("rotate-180");
+        money.innerText  = link.text.slice(0,1)
+    })
+})
