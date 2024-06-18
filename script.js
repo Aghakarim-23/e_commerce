@@ -33,8 +33,26 @@ let navLinks = document.querySelectorAll("#currencyMenu li a")
 let money = document.getElementById("money");
 navLinks.forEach(link =>{
     link.addEventListener("click", () => {
-        currencyMenu.classList.add("hidden")
+        // currencyMenu.classList.add("hidden")
         faChevronDown.classList.remove("rotate-180");
         money.innerText  = link.text.slice(0,1)
+    })
+})
+// for navlink color
+let navLinksColor = document.querySelectorAll("#currencyMenu li")
+navLinksColor.forEach(coloredLink =>{
+    coloredLink.addEventListener("click", () => {
+        navLinksColor.forEach(coloredLink => coloredLink.classList.remove("bg-gray-200"))
+        coloredLink.classList.add("bg-gray-200")
+    })
+})
+
+let leftSideNavlinks = document.querySelectorAll("#leftSideNavlinks a")
+leftSideNavlinks.forEach(leftSideLink => {
+    leftSideLink.addEventListener("click", () =>{
+        leftSideNavlinks.forEach(leftSideLink => {
+            leftSideLink.classList.remove("text-green-600", "border-green-300","border-b-2")
+        })
+        leftSideLink.classList.add("text-green-600", "border-green-300","border-b-2")
     })
 })
