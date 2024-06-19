@@ -14,19 +14,27 @@ faChevronDown.addEventListener("click", () => {
 
 const faShoppingCard = document.querySelector(".fa-cart-shopping")
 const overlay = document.getElementById("overlay")
+const shoppingCard = document.getElementById("shoppingCard")
 faShoppingCard.addEventListener("click", () =>{
     overlay.classList.toggle("bg-gray-200")
+    shoppingCard.classList.toggle("hidden")
 })
-
 document.addEventListener("click", (e) =>{
     if(!currencyMenu.contains(e.target) && (!faChevronDown.contains(e.target))){
+        e.stopPropagation()
         currencyMenu.classList.add("hidden")
         faChevronDown.classList.remove("rotate-180");
+        shoppingCard.classList.remove("hidden")
     }
 
     if(!faShoppingCard.contains(e.target)){
         overlay.classList.remove("bg-gray-200")
+        shoppingCard.classList.add("hidden")
     }
+})
+
+shoppingCard.addEventListener("click", (e)=>{
+    e.stopPropagation()
 })
 
 let navLinks = document.querySelectorAll("#currencyMenu li a")
@@ -38,7 +46,6 @@ navLinks.forEach(link =>{
         faChevronDown.classList.remove("rotate-180");
         money.innerText  = link.text.slice(0,1) ;
     })
-    console.log(price);
 })
 
 // for change all product currency 
