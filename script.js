@@ -24,7 +24,6 @@ document.addEventListener("click", (e) =>{
         e.stopPropagation()
         currencyMenu.classList.add("hidden")
         faChevronDown.classList.remove("rotate-180");
-        shoppingCard.classList.remove("hidden")
     }
 
     if(!faShoppingCard.contains(e.target)){
@@ -43,6 +42,26 @@ sizeLinks.forEach(sizeLink => {
         sizeLinks.forEach(link => link.classList.remove("text-white", "bg-black"))  
         sizeLink.classList.add("text-white", "bg-black") 
     })
+})
+
+const colorLinks = document.querySelectorAll(".colorLinks")
+colorLinks.forEach(linkContainer =>{
+    const links = linkContainer.querySelectorAll("a")
+    links.forEach(link => {
+        link.addEventListener("click", ()=>{
+            links.forEach(l => l.classList.remove("border-4","border-green-300"))
+            link.classList.add("border-4","border-green-300")
+        })
+    })
+})
+
+const product_count = document.querySelectorAll(".product-count")
+const plus = document.getElementsByClassName("plus")
+const minus = document.getElementsByClassName("minus")
+plus[0].addEventListener("click",() =>{
+    if(product_count.innerText <= 0){
+        product_count.innerText++
+    }
 })
 
 let navLinks = document.querySelectorAll("#currencyMenu li a")
