@@ -37,6 +37,14 @@ shoppingCard.addEventListener("click", (e)=>{
     e.stopPropagation()
 })
 
+const sizeLinks = document.querySelectorAll(".sizeLinks a")
+sizeLinks.forEach(sizeLink => {
+    sizeLink.addEventListener("click", ()=> {
+        sizeLinks.forEach(link => link.classList.remove("text-white", "bg-black"))  
+        sizeLink.classList.add("text-white", "bg-black") 
+    })
+})
+
 let navLinks = document.querySelectorAll("#currencyMenu li a")
 let money = document.getElementById("money");
 let price = document.querySelectorAll(".price")
